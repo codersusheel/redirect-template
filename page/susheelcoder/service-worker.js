@@ -1,15 +1,15 @@
-const CACHE = "404-page";
+const CACHE = "/";
 
 self.addEventListener("install", e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.add("404.html"))
+    caches.open(CACHE).then(c => c.add("/"))
   );
 });
 
 self.addEventListener("fetch", e => {
   if (e.request.mode === "navigate") {
     e.respondWith(
-      fetch(e.request).catch(() => caches.match("404.html"))
+      fetch(e.request).catch(() => caches.match("/"))
     );
   }
 });
