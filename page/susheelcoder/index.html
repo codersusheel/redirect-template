@@ -8,19 +8,26 @@
     <title>Page Moved</title>
 
     <meta name="description"
-        content="This page has moved to a new location. You will be redirected automatically.">
+        content="This page has moved to a new website location. Redirecting automatically.">
 
     <meta name="robots" content="noindex, follow">
 
-    <!-- New Website -->
     <link rel="canonical" href="https://codersusheel.netlify.app/">
 
-    <!-- JS Dynamic Redirect -->
     <script>
-        const newBase = "https://codersusheel.netlify.app";
-        const currentPath = window.location.pathname;
+        const newDomain = "https://codersusheel.netlify.app";
 
-        window.location.replace(newBase + currentPath);
+        const currentPath = window.location.pathname;
+        const currentQuery = window.location.search;
+        const currentHash = window.location.hash;
+
+        const redirectUrl =
+            newDomain +
+            currentPath +
+            currentQuery +
+            currentHash;
+
+        window.location.replace(redirectUrl);
     </script>
 
 </head>
