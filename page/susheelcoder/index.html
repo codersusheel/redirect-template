@@ -2,41 +2,25 @@
 <html lang="en">
 
 <head>
-    <!-- Basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title -->
     <title>Page Moved</title>
 
-    <!-- SEO -->
     <meta name="description"
-        content="This page has moved to a new location. You will be automatically redirected to the updated page.">
+        content="This page has moved to a new location. You will be redirected automatically.">
 
     <meta name="robots" content="noindex, follow">
 
-    <!-- Canonical New URL -->
+    <!-- New Website -->
     <link rel="canonical" href="https://codersusheel.netlify.app/">
 
-    <!-- Instant Redirect -->
-    <meta http-equiv="refresh" content="0; url=https://codersusheel.netlify.app/">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Page Moved">
-    <meta property="og:description"
-        content="This page has moved to a new location. Redirecting to the updated page.">
-    <meta property="og:url" content="https://codersusheel.netlify.app/">
-    <meta property="og:type" content="website">
-
-    <!-- Theme -->
-    <meta name="theme-color" content="#000000">
-
-    <!-- Referrer -->
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- JS Redirect Backup -->
+    <!-- JS Dynamic Redirect -->
     <script>
-        window.location.replace("https://codersusheel.netlify.app/");
+        const newBase = "https://codersusheel.netlify.app";
+        const currentPath = window.location.pathname;
+
+        window.location.replace(newBase + currentPath);
     </script>
 
 </head>
@@ -44,11 +28,7 @@
 <body>
 
     <p>
-        This page has moved.
-        If you are not redirected automatically,
-        <a href="https://codersusheel.netlify.app/">
-            click here
-        </a>.
+        Redirecting to the new website...
     </p>
 
 </body>
