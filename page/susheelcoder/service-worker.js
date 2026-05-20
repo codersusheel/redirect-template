@@ -1,6 +1,6 @@
 const CACHE_NAME = 'susheelcoder_404';
 const OFFLINE_URL = '/';
-const NOT_FOUND_URL = '/pages/404.html';
+const NOT_FOUND_URL = '/';
 
 const ASSETS_TO_CACHE = [
   '/',
