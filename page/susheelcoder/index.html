@@ -5,38 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Page Moved</title>
+    <title>Website Moved</title>
 
     <meta name="description"
-        content="This page has moved to a new website location. Redirecting automatically.">
+        content="This website has moved to a new location. Redirecting automatically.">
 
     <meta name="robots" content="noindex, follow">
 
     <link rel="canonical" href="https://codersusheel.netlify.app/">
 
+    <!-- Redirect -->
     <script>
         const newDomain = "https://codersusheel.netlify.app";
 
-        const currentPath = window.location.pathname;
-        const currentQuery = window.location.search;
-        const currentHash = window.location.hash;
+        const path = window.location.pathname;
+        const query = window.location.search;
+        const hash = window.location.hash;
 
-        const redirectUrl =
+        window.location.replace(
             newDomain +
-            currentPath +
-            currentQuery +
-            currentHash;
-
-        window.location.replace(redirectUrl);
+            path +
+            query +
+            hash
+        );
     </script>
 
 </head>
 
 <body>
 
-    <p>
-        Redirecting to the new website...
-    </p>
+    Redirecting...
+
+    <!-- Service Worker Register -->
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            navigator.serviceWorker.register("/service-worker.js");
+
+        }
+
+    </script>
 
 </body>
 
