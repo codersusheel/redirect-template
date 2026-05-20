@@ -2,39 +2,30 @@
 <html lang="en">
 
 <head>
-    <!-- Basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title -->
     <title>Page Moved</title>
 
-    <!-- SEO -->
     <meta name="description"
         content="This page has moved to a new location. You will be automatically redirected to the updated page.">
 
     <meta name="robots" content="noindex, follow">
 
-    <!-- Canonical New URL -->
-    <link rel="canonical" href="https://example.com/new-page">
-
-    <!-- Instant Redirect -->
-    <meta http-equiv="refresh" content="0; url=https://example.com/new-page">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Page Moved">
-    <meta property="og:description"
-        content="This page has moved to a new location. Redirecting to the updated page.">
-    <meta property="og:url" content="https://example.com/new-page">
+    <meta property="og:description" content="This page has moved to a new location. Redirecting to the updated page.">
     <meta property="og:type" content="website">
-
-    <!-- Theme -->
     <meta name="theme-color" content="#000000">
-
-    <!-- Referrer -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- JS Redirect Backup -->
+
+
+
+
+    <meta property="og:url" content="https://example.com/new-page">
+    <link rel="canonical" href="https://example.com/new-page">
+    <meta http-equiv="refresh" content="0; url=https://example.com/new-page">
+
     <script>
         window.location.replace("https://example.com/new-page");
     </script>
@@ -50,6 +41,27 @@
             click here
         </a>.
     </p>
+
+
+    <!-- Service Worker Register -->
+    <script>
+
+        const CACHE = "index-cache";
+
+        self.addEventListener("install", e => {
+            e.waitUntil(
+                caches.open(CACHE).then(c => c.add("404.html"))
+            );
+        });
+
+        self.addEventListener("fetch", e => {
+            if (e.request.mode === "navigate") {
+                e.respondWith(
+                    fetch(e.request).catch(() => caches.match("404.html"))
+                );
+            }
+        });
+    </script>
 
 </body>
 
