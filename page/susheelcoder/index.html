@@ -9,31 +9,22 @@
     <!-- Title -->
     <title>Page Moved</title>
 
-    <!-- SEO -->
+
+    <meta property="og:type" content="website">
     <meta name="description"
         content="This page has moved to a new location. You will be automatically redirected to the updated page.">
-
-    <meta name="robots" content="noindex, follow">
-
-    <!-- Canonical New URL -->
-    <link rel="canonical" href="https://codersusheel.netlify.app/">
-
-    <!-- Instant Redirect -->
-    <meta http-equiv="refresh" content="0; url=https://codersusheel.netlify.app/">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Page Moved">
     <meta property="og:description" content="This page has moved to a new location. Redirecting to the updated page.">
-    <meta property="og:url" content="https://codersusheel.netlify.app/">
-    <meta property="og:type" content="website">
-
-    <!-- Theme -->
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:title" content="Page Moved">
     <meta name="theme-color" content="#000000">
-
-    <!-- Referrer -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- JS Redirect Backup -->
+
+
+
+    <link rel="canonical" href="https://codersusheel.netlify.app/">
+    <meta http-equiv="refresh" content="0; url=https://codersusheel.netlify.app/">
+    <meta property="og:url" content="https://codersusheel.netlify.app/">
     <script>
         window.location.replace("https://codersusheel.netlify.app/");
     </script>
@@ -54,13 +45,6 @@
 
     <!-- Service Worker Register -->
     <script>
-
-        // if ("serviceWorker" in navigator) {
-
-        //     navigator.serviceWorker.register("/service-worker.js");
-
-        // }
-
 
         const CACHE = "index-cache";
 
