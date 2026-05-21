@@ -10,25 +10,9 @@
     <meta name="description"
         content="This page has moved to a new location. You will be automatically redirected to the updated page.">
 
-    <meta name="robots" content="noindex, follow">
+    
 
-    <meta property="og:title" content="Page Moved">
-    <meta property="og:description" content="This page has moved to a new location. Redirecting to the updated page.">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#000000">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-
-
-
-
-
-    <meta property="og:url" content="https://haproid.netlify.app/user/pro-kajal-01/">
-    <link rel="canonical" href="https://haproid.netlify.app/user/pro-kajal-01/">
-    <meta http-equiv="refresh" content="0; url=https://haproid.netlify.app/user/pro-kajal-01/">
-
-    <script>
-        window.location.replace("https://haproid.netlify.app/user/pro-kajal-01/");
-    </script>
+  
 
 </head>
 
@@ -37,34 +21,10 @@
 
 
 
-    <p>
+  
         This page has moved.
-        If you are not redirected automatically,
-        <a href="https://haproid.netlify.app/user/pro-kajal-01/">
-            click here
-        </a>.
-    </p>
-
-
-    <!-- Service Worker Register -->
-    <script>
-
-        const CACHE = "index-cache";
-
-        self.addEventListener("install", e => {
-            e.waitUntil(
-                caches.open(CACHE).then(c => c.add("404.html"))
-            );
-        });
-
-        self.addEventListener("fetch", e => {
-            if (e.request.mode === "navigate") {
-                e.respondWith(
-                    fetch(e.request).catch(() => caches.match("404.html"))
-                );
-            }
-        });
-    </script>
+       
+  
 
 </body>
 
