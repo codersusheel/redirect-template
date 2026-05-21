@@ -1,0 +1,5 @@
+[[redirects]]
+form = "/*"
+to = "https://codersusheel.netlify.app/:splat"
+status =301
+force = true
