@@ -1,0 +1,30 @@
+ 
+ 
+ 
+# =========================
+# 301 Permanent Redirect
+# =========================
+/old-page        /new-page        301
+
+# About page moved permanently
+/about-old       /about           301
+
+# =========================
+# 302 Temporary Redirect
+# =========================
+/login           /maintenance     302
+
+# =========================
+# Folder move (section shift)
+# =========================
+/page/           /new-page/       301
+
+# =========================
+# All pages move (site change)
+# =========================
+/*               /new-site/       301
+
+# =========================
+# Dynamic redirect (splat)
+# =========================
+/blog/*          /articles/:splat 301
